@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FightMonsterActivity">
+
+    <Button
+        android:id="@+id/ReturnFromFightButton"
+        android:layout_width="87dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:onClick="switchToMainActivity"
+        android:text="Palaa"
+        app:layout_constraintEnd_toStartOf="@+id/ShowMonsterFragmentButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ShowMonsterFragmentButton"
+        android:layout_width="123dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:text="Näytä hirviö"
+        app:layout_constraintEnd_toStartOf="@+id/BossFightFragmentButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BossFightFragmentButton"
+        android:layout_width="122dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        android:text="Päävihollinen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/FightMonstersFrame"
+        android:layout_width="409dp"
+        android:layout_height="646dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowMonsterFragmentButton"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
