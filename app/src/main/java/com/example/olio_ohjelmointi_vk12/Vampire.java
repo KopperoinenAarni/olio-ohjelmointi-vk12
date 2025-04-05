@@ -10,7 +10,6 @@ public class Vampire extends Monster {
     public Vampire(int maxLife, String name) {
         super(maxLife, name);
     }
-
     public static String getRandomName() {
         int i = rand.nextInt(names.length);
         return names[i];

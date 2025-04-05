@@ -31,7 +31,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void switchToFightMonsterActivity(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        TextView PlayerScoreText = findViewById(R.id.PlayerScoreText);
+        int score = GameManager.getInstance().getPlayer().getScore();
+        PlayerScoreText.setText("Pisteesi: " + String.valueOf(score));
+    }
+
+    public void switchToFightMonstersActivity(View view) {
         Intent intent = new Intent(this, FightMonstersActivity.class);
         startActivity(intent);
     }

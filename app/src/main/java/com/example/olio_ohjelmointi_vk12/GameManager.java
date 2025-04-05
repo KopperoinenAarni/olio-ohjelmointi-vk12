@@ -15,6 +15,7 @@ public class GameManager {
         player = new Player();
     }
 
+
     public static GameManager getInstance() {
         if (instance == null) {
             instance = new GameManager();
@@ -33,7 +34,9 @@ public class GameManager {
 
         if (n > 5) {
             newMonster = new Vampire(rand.nextInt(100), Vampire.getRandomName());
-        } else newMonster = new Skeleton(rand.nextInt(100), Skeleton.getRandomName());
+        } else {
+            newMonster = new Skeleton(rand.nextInt(100), Skeleton.getRandomName());
+        }
 
         latestMonster = newMonster;
         return newMonster;
